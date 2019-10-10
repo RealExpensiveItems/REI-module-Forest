@@ -1,0 +1,9 @@
+module.exports={
+  localPort:3008,
+  dbInfo:{
+    user:"forest",
+    password:"",
+    dbName:"module_forest",
+    tblName:"may_like"
+  }
+}
