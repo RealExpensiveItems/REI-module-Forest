@@ -32,23 +32,24 @@
 
 ## Usage
 
-> Some usage instructions
+> No API provided by this module so far
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
-- etc
 
 ## Development
 
-### Installing Dependencies
+### Installing Dependencies and Start Server
 
 From within the root directory:
 
 ```sh
 npm install -g webpack
 npm install
+npm run build
+npm start
 ```
 
