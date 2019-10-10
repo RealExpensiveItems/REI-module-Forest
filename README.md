@@ -9,8 +9,7 @@
   - DOM tree and components framework added
   - Basic connections among MVP online
 
-#### todo
-
+  #### todo
   - mock data population
   - controller implement
   - components installing
