@@ -1,7 +1,7 @@
 {
-  "name": "fec-easyetsy-module-forest",
+  "name": "fec-rei-module-forest",
   "version": "1.0.0",
-  "description": "one of the modules in program easyEtsy, rendering 'you my also like', 'subscribe', 'about', 'options' and footers",
+  "description": "",
   "author": "Forest the MacSmasher",
   "license": "UNLICENSED",
   "engines": {
