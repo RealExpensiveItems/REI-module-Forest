@@ -1,18 +1,144 @@
 DROP DATABASE IF EXISTS module_forest;
 CREATE DATABASE module_forest;
 USE module_forest;
-CREATE TABLE may_like(
+
+CREATE TABLE also_bought(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  imgurl TEXT NOT NULL,
-  title TEXT NOT NULL,
-  brand TEXT NOT NULL,
-  price FLOAT NOT NULL,
-  discount TEXT NOT NULL,
-  shipping TEXT
+  rate TEXT NOT NULL,
+  reviewer INT NOT NULL,
+  seller TEXT NOT NULL,
+  item TEXT NOT NULL,
+  price TEXT NOT NULL
 );
+
 /*
 mysql -u forest < db/dbseeding.sql
 */
-INSERT INTO may_like (imgurl, title, brand, price, discount, shipping)
-VALUE ("https://i.etsystatic.com/12695777/c/183/145/186/10/il/86daaf/1984587142/il_680x540.1984587142_l1d1.jpg",
-       "Kū Kia'i Mauna sticker, Mauna Kea", "StickerGuyUrusai", 5.99, "%0", "Free shipping eligible");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",289,"Darn Tough","Micro Crew Cushion Hiking Socks - Men's","$23.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",18,"REI Co-op","Ditty Sack - Set of 3","$19.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",42,"REI Co-op","Flexlite Air Chair","$99.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",21,"Patagonia","Performance Better Sweater Hoodie - Men's","$159.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",62,"REI Co-op","Lightweight Compression Stuff Sack","$20.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",75,"REI Co-op","Nalgene Wide-Mouth Water Bottle - 48 fl. oz.","$11.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",7,"Mountain Hardwear","Ghost Shadow Insulated Hoodie - Women's","$250.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",168,"Arc'teryx","Cerium LT Down Hoodie - Men's","$379.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",227,"Mountain Hardwear","Ghost Whisperer/2 Down Jacket - Men's","$300.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",18,"Patagonia","Down Sweater Hoodie - Men's","$279.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",2,"REI Co-op","Magma 850 Down Hoodie 2.0 - Men's","$219.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",11,"Mountain Hardwear","Ghost Shadow Vest - Men's","$175.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"The North Face","Thermoball Eco Insulated Hoodie - Men's","$220.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",105,"REI Co-op","Stormhenge 850 Down Jacket - Men's","$249.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"Rab","Cirrus Flex Insulated Hoodie - Men's","$200.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("3.25",3,"REI Co-op","650 Down Hoodie 2.0 - Men's","$119.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",8,"REI Co-op","650 Down Jacket 2.0 - Men's","$99.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",10,"REI Co-op","High Country Down Parka - Men's","$159.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",34,"The North Face","McMurdo Insulated Parka III - Men's","$330.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"The North Face","Eco Nuptse Down Jacket - Men's","$249.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",80,"REI Co-op","Nalgene Wide-Mouth Water Bottle - 16 fl. oz.","$8.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",13,"Edelrid","Boa Eco 9.8mm Non-Dry Rope","$109.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",120,"REI Co-op","Ruckpack 28 Pack","$99.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",3,"Tecnu","Outdoor Skin Cleanser","$1.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"Smartwool","Merino Sport Ultra Light Hoodie - Men's","$125.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",1,"GSI Outdoors","Glacier Vacuum JavaPress - 30 fl. oz.","$39.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",87,"Injinji","Run Lightweight No-Show Socks","$12.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",140,"WRIGHTSOCK","CoolMesh II Quarter Socks","$14.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",18,"Arc'teryx","Aptin Shorts - Men's","$79.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",17,"REI Co-op","Kindercone 25 Sleeping Bag - Kids'","$59.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",453,"Adventure Medical Kits","Ultralight/Watertight .7 Medical Kit","$28.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",2,"Black Diamond","PosiWire Quickdraw Quickpack - 12cm","$94.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",14,"Petzl","GRIGRI + Belay Device","$159.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",4,"Petzl","Tour Harness","$59.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",13,"Buff","Original Multifunctional Headwear","$20.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",102,"Injinji","Liner Crew Socks","$10.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",22,"Zamberlan","Vioz Lux GTX RR Hiking Boots - Men's","$345.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",1,"REI Co-op","XeroDry GTX Jacket - Men's Tall Sizes","$159.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",357,"Columbia","Silver Ridge Convertible Pants - Men's","$60.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",1,"REI Co-op","Midweight Base Layer Half-Zip Top - Men's Tall Sizes","$54.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",3,"REI Co-op","Midweight Base Layer Bottoms - Men's Tall Sizes","$49.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",4,"REI Co-op","Active Pursuits Half-Zip Shirt - Men's Tall Sizes","$49.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"REI Co-op","Lightweight Base Layer Long-Sleeve Crew Top - Men's Tall Sizes","$39.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",27,"SOL","Emergency Bivy","$16.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",8,"Merrell","Ascent Ride GTX Shoes - Men's","$119.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",132,"GOOD TO-GO","Herbed Mushroom Risotto - Single Serving","$7.50");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",126,"GSI Outdoors","Infinity Backpacker Mug","$9.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",10,"Garmin","tempe Wireless Temperature Sensor","$29.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",32,"Outdoor Research","Expedition Crocodile Gaiters","$99.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",63,"Mountain House","Chili Mac With Beef Pro-Pak - 2 Servings","$8.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",38,"Mountain House","Italian Pepper Steak - 2.5 Servings","$11.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("3.25",6,"GOOD TO-GO","Classic Marinara with Penne - Single Serving","$7.50");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",191,"Osprey","Hydraulics Reservoir - 3 Liters","$42.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",106,"Nalgene","Ultralite Wide-Mouth Water Bottle - 32 fl. oz.","$6.75");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("2",1,"The North Face","Arrowood Triclimate 3-in-1 Jacket - Women's","$199.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("3",1,"Patagonia","Better Sweater Fleece Jacket - Women's","$139.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",57,"Black Diamond","Spot 325 Headlamp","$39.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",53,"Black Diamond","Momentum Climbing Shoes - Ash - Men's","$94.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",26,"Merrell","Moab Adventure Moc Shoes - Men's","$100.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("3.5",10,"DexShell","Terrain Walking Socks","$42.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",63,"KUHL","Deceptr Pants - Men's","$89.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"Burton","GORE-TEX Mittens - Men's","$69.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("3.75",10,"The North Face","Dolomite 20 Double Sleeping Bag","$159.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",101,"Mountain House","Grilled Chicken Breasts and Mashed Potatoes - 2 Servings","$11.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",49,"Danner","Mountain Light  Cascade Hiking Boots - Women's","$359.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"Arc'teryx","Rise Toque","$39.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"Craghoppers","Etna Fleece Jacket - Men's","$85.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("3.75",21,"Five Ten","Guide Tennie Approach Shoes - Men's","$120.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",9,"The North Face","Stormbreak 3 Footprint","$45.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("2.5",21,"AlpineAire Foods","Pepper Beef with Rice - 2 Servings","$8.50");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",4,"Outdoor Research","Helium Bivy","$179.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",179,"Arc'teryx","Beta AR Jacket - Men's","$575.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",32,"Arc'teryx","Atom LT Insulated Jacket - Women's","$239.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",5,"Arc'teryx","Beta SV Bib Snow Pants - Men's","$549.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",71,"Arc'teryx","Covert Cardigan - Men's","$179.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",69,"Arc'teryx","Atom LT Insulated Vest - Men's","$175.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",34,"Arc'teryx","Trino Jacket - Men's","$225.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",13,"Arc'teryx","Cormac Zip-Neck Shirt - Men's","$95.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",81,"Arc'teryx","Captive Polo Shirt - Men's","$69.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",16,"Arc'teryx","Captive Polo Shirt - Men's","$79.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",2,"Arc'teryx","Downward T-Shirt - Men's","$39.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",46,"Norrona","Falketind GORE-TEX Jacket - Men's","$399.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",48,"Arc'teryx","Thorium AR Down Hoodie - Men's","$325.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",15,"Mountain Hardwear","Ghost Shadow Insulated Hoodie - Men's","$250.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",13,"Patagonia","Micro Puff Insulated Hoodie - Women's","$299.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",229,"Outdoor Research","Helium II Rain Jacket - Men's","$159.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",22,"REI Co-op","Merino Midweight Base Layer Bottoms - Men's","$79.50");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",71,"Darn Tough","Hiker Quarter Cushion Socks - Men's","$18.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",104,"Therm-a-Rest","Z-Seat Pad","$14.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",14,"TOAKS","Titanium Long Handle Spoon with Polished Bowl","$10.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",21,"Arc'teryx","Magnus Insulated Coat - Men's","$549.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",271,"Columbia","Alpine Action Insulated Jacket - Men's","$170.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",292,"Columbia","Alpine Action Insulated Jacket - Men's Extended Sizes","$190.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",25,"LuminAID","PackLite Nova USB Solar Lantern","$24.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",46,"KUHL","Radikl Pants - Men's","$89.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",11,"REI Co-op","Stuff Travel Pack - 20L","$29.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",50,"MSR","Elixir 3 Tent with Footprint","$299.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",27,"Sea to Summit","Ultra-Sil Travel Day Pack","$34.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",10,"Campsuds","in Nalgene Bottle - 4 oz.","$5.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"Salomon","OUTsnap CSWP Hiking Boots - Men's","$130.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("0",0,"REI Co-op","Lodge Beanie - Men's","$19.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",111,"Arc'teryx","Atom LT Insulated Jacket - Men's","$239.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",40,"Arc'teryx","Cerium LT Down Hoodie  - Women's","$379.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",17,"Arc'teryx","Beta SL Pants - Men's","$275.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",58,"Arc'teryx","Cerium LT Down Jacket - Men's","$349.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",169,"BearVault","BV500 Food Container","$79.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",49,"Sea to Summit","Wilderness Wipes","$4.50");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",157,"prAna","Stretch Zion Pants - Men's","$85.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",15,"REI Co-op","Rainier Full-Zip Rain Pants - Men's","$89.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",273,"Salomon","X Ultra 3 Mid GTX Hiking Boots - Men's","$165.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",27,"Darn Tough","Hiker Boot Full-Cushion Socks - Men's","$26.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4",192,"REI Co-op","Half Dome 2 Plus Tent","$229.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",32,"Arc'teryx","Proton LT Insulated Hoodie - Men's","$299.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",154,"REI Co-op","Nalgene Wide-Mouth Water Bottle - 32 fl. oz.","$10.95");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",29,"Arc'teryx","Aerios FL Mid GTX Hiking Boots - Men's","$185.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",19,"Arc'teryx","Arc'Word T-Shirt - Men's","$35.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",30,"Patagonia","Nano Puff Insulated Hoodie - Women's","$249.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("5",30,"prAna","Stretch Zion Straight Pants - Men's","$89.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",81,"REI Co-op","Stormhenge 850 Down Jacket - Women's","$249.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",51,"Smartwool","Merino 150 Crew Base Layer Long-Sleeve Top - Men's","$80.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",15,"Arc'teryx","Ceres SV Down Parka - Men's","$849.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",61,"Arc'teryx","Therme Parka - Men's","$699.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.25",47,"Arc'teryx","Camosun Insulated Parka - Men's","$649.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",20,"Arc'teryx","Sidewinder SV Shell Jacket - Men's","$749.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",69,"Arc'teryx","Fission SV Insulated Jacket - Men's","$689.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.75",29,"Arc'teryx","Cassiar Jacket - Men's","$725.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",38,"Arc'teryx","Rush Jacket - Men's","$699.00");
+INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("4.5",2,"Arc'teryx","Rush IS Insulated Jacket - Men's","$699.00");

@@ -4,52 +4,25 @@ import ReactDOM from 'react-dom';
 class ModuleForest extends React.Component{
   constructor(props){
     super(props);
-    this.state={};
+    this.state={
+      arr:[]
+    };
+  }
+  componentDidMount(){
+    var arr=[];
+    var nums=[];
+    for(var i=0;i<128;i++)nums[i]=i+1;
+    for(var i=0;i<5;i++){
+      var temp=Math.floor(Math.random()*(128-i));
+      arr[i]=("00"+nums[temp]).slice(-3);
+      nums[temp]=nums[128-1-i];
+    }
+    this.setState({arr:arr});
   }
   render(){
     return(
       <div>
-        <div id="you_may_also_like">
-          you may also like<br/>
-          {/* <YmalList/> */}(((YmalList)))<br/>
-          <br/>
-        </div>
-        <button>Shop more similar items</button><br/><br/>
-        <div id="explore_more_options">
-          Explore more options<br/>
-          <br/>
-          {/* <Keywords/> */}(((Keywords)))<br/>
-          <br/>
-          Listed on (date)<br/>
-          (favourite counts)<br/>
-          report this item<br/>
-          <br/>
-        </div>
-        <br/>
-        <div>curve1</div>
-        <br/>
-        <div>
-          Get fresh Etsy trends and unique gift ideas delivered right to your box.<br/>
-          <form>
-            enter your email<input></input>
-            <button>Subscribe</button><br/>
-          </form>
-        </div>
-        <br/>
-        <div>curve2</div>
-        <br/>
-        <div id="about">
-          <div>Shop</div>
-          <div>Sell</div>
-          <div>About</div>
-          <div>Help</div>
-
-          <div id="links">Download the Etsy App</div>
-        </div><br/><br/>
-        <div id="footer">
-          {/* <Options/> */}(((Options)))
-          <div>terms</div>
-        </div>
+        {this.state.arr.map((str)=>(<img src={"https://rei-module-forest-imgs.s3-us-west-1.amazonaws.com/pics/"+str+".jpg"}/>))}
       </div>);
   }
 }

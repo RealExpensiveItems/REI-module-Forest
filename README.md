@@ -1,27 +1,11 @@
-# EasyEtsy! (module Forest)
+# REI (module Forest)
 
-> One of the modules in program easyEtsy, rendering 'you my also like', 'subscribe', 'about', 'options' and footers.
-
-### Current Progress
-
-  - Database schema built
-  - Server and router setup
-  - DOM tree and components framework added
-  - Basic connections among MVP online
-
-  #### todo
-  - mock data population
-  - controller implement
-  - components installing
-  - basic CSS layout
-  - advanced CSS and animation
+> One of the modules in program REI, rendering item recommending module.
 
 ## Related Projects
 
-  - https://github.com/easyEtsy/Dustin--Service
-  - https://github.com/easyEtsy/Harris-Service
-  - https://github.com/easyEtsy/Jiyoon-Service
-  - https://github.com/easyEtsy/Aaron-Service
+  - https://github.com/RealExpensiveItems/Jiyoon-Service
+  - tbd
 
 ## Table of Contents
 

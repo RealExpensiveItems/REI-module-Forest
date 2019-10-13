@@ -1,5 +1,5 @@
 const db=require('../db');
-const tbl=require('../configs').dbInfo.tblName;
+const abData=require('../configs').dbInfo.abTableName;
 
 module.exports=(req,res)=>{
   var id= req.params.id;

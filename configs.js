@@ -4,6 +4,6 @@ module.exports={
     user:"forest",
     password:"",
     dbName:"module_forest",
-    tblName:"may_like"
+    abTableName:"also_bought",
   }
 }
