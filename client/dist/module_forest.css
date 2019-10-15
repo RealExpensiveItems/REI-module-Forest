@@ -1,9 +1,67 @@
-.abContainer{
-  float:left;
-  width:200px;
+/* @media screen and (min-width: 320px) and (max-width: 1156px){ */
+@font-face {
+  font-family: 'TeXGyre';
+  src: url("./asset/TeXGyreSchola-Bold.ttf");
 }
 
-.abImg{
-  width:150px;
-  height:200px;
+.box{
+  margin: 0;
+}
+
+.moduleTitle {
+  font-family: 'TeXGyre';
+  font-size: 20px;
+  margin: 0 13px;
+}
+/* , sans-serif */
+.abContainer {
+  float: left;
+  margin: 15px;
+
+  height: 320px;   /* height shouldn't matter here, once list height is declared */
+  width: 180px;
+  /* size should be the same with another module */
+}
+
+.abImgContainer {
+  height: 180px;
+  width: 180px;
+  /* why 100% didn't work here? */
+
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.abImg {
+  /* fixing the ratio */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.abText {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  margin: 4px 1px;
+}
+
+.stars {
+  float:left;
+  margin: 0 2px;
+}
+
+.abItemTextBox:hover{
+  text-decoration: underline;
+}
+
+.itemName{
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.itemPrice{
+  font-size: 13px;
+  font-weight: 300;
 }

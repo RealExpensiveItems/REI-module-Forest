@@ -23,8 +23,10 @@ module.exports = (req, res) => {
         if (err) res.status(400).send(err);
         else {
           resArr.push(result[0]);
-          if(devMode)resArr[resArr.length-1].img="https://hsm.utimaco.com/wp-content/uploads/2017/09/Applications_Grey_RGB_Random_Number_Generation-300x300.png";
-          if(resArr.length===10) res.status(200).send(resArr);
+          if (devMode)
+            resArr[resArr.length - 1].img =
+              "https://hsm.utimaco.com/wp-content/uploads/2017/09/Applications_Grey_RGB_Random_Number_Generation-300x300.png";
+          if (resArr.length === 10) res.status(200).send(resArr);
         }
       }
     );
