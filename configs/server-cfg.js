@@ -5,5 +5,8 @@ module.exports={
     password:"",
     dbName:"module_forest",
     abTableName:"also_bought",
-  }
-}
+  },
+  
+  devMode:true,
+  // devMode:false,
+};

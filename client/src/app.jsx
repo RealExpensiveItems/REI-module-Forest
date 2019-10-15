@@ -1,29 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
+import {config} from '../../configs/client-cfg';
 
 class ModuleForest extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      arr:[]
+      abData:[],
+      loaded:false,
+      devMode:config.devMode
     };
   }
   componentDidMount(){
-    var arr=[];
-    var nums=[];
-    for(var i=0;i<128;i++)nums[i]=i+1;
-    for(var i=0;i<5;i++){
-      var temp=Math.floor(Math.random()*(128-i));
-      arr[i]=("00"+nums[temp]).slice(-3);
-      nums[temp]=nums[128-1-i];
-    }
-    this.setState({arr:arr});
+    if(config.devMode)console.log("DEV-Mode on, image imported from test file");
+    axios.get("/ab")
+    .then((data)=>{
+      // console.log(data.data);
+      this.setState({
+        abData:data.data,
+        loaded:true
+      });
+    },(err)=>{console.error(err)});
   }
   render(){
-    return(
+    return(//Todo: template for different window size
+      this.state.loaded?(
       <div>
-        {this.state.arr.map((str)=>(<img src={"https://rei-module-forest-imgs.s3-us-west-1.amazonaws.com/pics/"+str+".jpg"}/>))}
-      </div>);
+        {/* Todo: import multiple titles */}
+        <h2>People who bought this item also bought</h2>
+        {this.state.abData.map((obj)=>(
+          <div className="abContainer">
+            <img className="abImg"
+              src={this.state.devMode
+                ?require('../../db/rawData/pics/'+('00'+obj.id).slice(-3)+'.jpg')
+                :obj.img
+            }/>
+            <h5>{obj.rate+"("+obj.reviewer+")"}</h5>
+            <p>{obj.seller}</p>
+            <p>{obj.item}</p>
+            <p>{obj.price}</p>
+          </div>
+        ))}
+      </div>
+      ):<div></div>
+    );
   }
 }
 

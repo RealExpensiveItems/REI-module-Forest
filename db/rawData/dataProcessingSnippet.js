@@ -130,8 +130,10 @@ var data=[
 ];
 
 var sqlfy=()=>{
-  for(var obj of data){
-    console.log(`INSERT INTO also_bought (rate,reviewer,seller,item,price)VALUE("${obj.rate}",${obj.reviewer},"${obj.seller}","${obj.item}","${obj.price}");`);
+  for(var i=0;i<data.length;i++){
+    var obj=data[i];
+    obj.img="https://rei-module-forest-imgs.s3-us-west-1.amazonaws.com/pics/"+("00"+(i+1)).slice(-3)+".jpg";
+    console.log(`INSERT INTO also_bought (rate,reviewer,seller,item,price,img)VALUE("${obj.rate}",${obj.reviewer},"${obj.seller}","${obj.item}","${obj.price}","${obj.img}");`);
   }
 }
 sqlfy();
@@ -147,7 +149,7 @@ var uniquefy=()=>{
   return res;
 };
 
-var imgUrlfy=()=>{
+var bookmarkfy=()=>{
   for(var i=0;i<data.length;i++){
     if((i+1)%10===0)
       console.log("**********")

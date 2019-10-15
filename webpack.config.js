@@ -19,6 +19,11 @@ module.exports = {
           presets: ['@babel/preset-env', '@babel/preset-react'],
         },
       },
+      //how to load local image into webpack
+      {
+      　　test: /\.(png|jpg)$/,
+      　　loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]' //file naming
+      }
     ],
   },
   resolve: {

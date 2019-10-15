@@ -5,7 +5,9 @@
 ## Related Projects
 
   - https://github.com/RealExpensiveItems/Jiyoon-Service
-  - tbd
+  - https://github.com/RealExpensiveItems/ryansmodule
+  - (to be filled)
+  - (to be filled)
 
 ## Table of Contents
 
