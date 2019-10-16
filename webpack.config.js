@@ -21,8 +21,13 @@ module.exports = {
       },
       //how to load local image into webpack
       {
-      　　test: /\.(png|jpg)$/,
+        // 　test: /\.(png|jpg)$/,
+        　test: /\.(jpg)$/,
       　　loader: 'url-loader?limit=8192&name=asset/images/[hash:8].[name].[ext]' //file naming
+      },
+      {
+        　test: /\.(png)$/,
+      　　loader: 'url-loader?limit=8192&name=asset/stars/[hash:8].[name].[ext]'
       }
     ],
   },
