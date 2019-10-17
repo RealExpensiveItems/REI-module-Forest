@@ -5,16 +5,15 @@ class AlsoBought extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      // loaded:false,
       devMode:config.devMode
     };
   }
   render(){
     return(
-      <div>
+      <div id="ab" className="box">
         {/* Todo: import multiple titles */}
         <h2 className="moduleTitle">People who bought this item also bought</h2>
-        <div className="abList">
+        <div id="abList">
           {this.props.data.map((obj)=>(
             <div className="abContainer">
 

@@ -14,21 +14,30 @@ const getRandom = () => {
   return arr;
 };
 
-module.exports = (req, res) => {
-  var resArr = [];
-  getRandom().map(id => {
-    db.query(
-      `SELECT * FROM ${abData} WHERE ${abData}.id=${id}`,
-      (err, result) => {
-        if (err) res.status(400).send(err);
-        else {
-          resArr.push(result[0]);
-          // if (devMode)
-          //   resArr[resArr.length - 1].img =
-          //     "https://hsm.utimaco.com/wp-content/uploads/2017/09/Applications_Grey_RGB_Random_Number_Generation-300x300.png";
-          if (resArr.length === 10) res.status(200).send(resArr);
+module.exports = {
+  ab: (req, res) => {
+    var resArr = [];
+    getRandom().map(id => {
+      db.query(
+        `SELECT * FROM ${abData} WHERE ${abData}.id=${id}`,
+        (err, result) => {
+          if (err) res.status(400).send(err);
+          else {
+            resArr.push(result[0]);
+            // if (devMode)
+            //   resArr[resArr.length - 1].img =
+            //     "https://hsm.utimaco.com/wp-content/uploads/2017/09/Applications_Grey_RGB_Random_Number_Generation-300x300.png";
+            if (resArr.length === 10) res.status(200).send(resArr);
+          }
         }
-      }
-    );
-  });
+      );
+    });
+  },
+
+  sc: (req, res) => {
+    db.query(`SELECT * FROM ${req.params.tbl}`, (err, result) => {
+      if (err) res.status(400).send(err);
+      else res.status(200).send(result);
+    });
+  }
 };

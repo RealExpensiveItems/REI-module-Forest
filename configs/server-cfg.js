@@ -5,6 +5,7 @@ module.exports={
     password:"",
     dbName:"module_forest",
     abTableName:"also_bought",
+    sizeTableName:["jackets","pants","bikes","boots"]
   },
   
   devMode:true,

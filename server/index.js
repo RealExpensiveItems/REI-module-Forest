@@ -17,7 +17,8 @@ app.listen(port, () => {
 //   res.status(200).send(":" + port + " is watching you");
 // });
 
-app.get("/ab", ctrl);
+app.get("/ab", ctrl.ab);
+app.get("/sc/:tbl", ctrl.sc);
 
 /////////// data generator page ////////////
 

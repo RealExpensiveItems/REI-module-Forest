@@ -37,7 +37,7 @@ var getNumber=(str)=>{
     if(str[i]===" ")
       return str.slice(0,i);
 };
-var wipeSpace=(str)=>{
+var wipeSpace=(str)=>{//String.trim() can do it for you! idiot!
   for(var i=0;i<str.length;i++)
     if(str[i]!==" " && str[i]!=="\n"){var a=i;break;}
   for(var i=str.length-1;i>=0;i--)
