@@ -1,5 +1,6 @@
 const db = require("../db");
 const abData = require("../configs/server-cfg").dbInfo.abTableName;
+const typeData = require("../configs/server-cfg").dbInfo.typeTableName;
 // const devMode = require("../configs/server-cfg").devMode;
 
 const getRandom = () => {
@@ -19,7 +20,7 @@ module.exports = {
     var resArr = [];
     getRandom().map(id => {
       db.query(
-        `SELECT * FROM ${abData} WHERE ${abData}.id=${id}`,
+        `SELECT * FROM ${abData} WHERE ${abData}.id=${id};`,
         (err, result) => {
           if (err) res.status(400).send(err);
           else {
@@ -35,9 +36,24 @@ module.exports = {
   },
 
   sc: (req, res) => {
-    db.query(`SELECT * FROM ${req.params.tbl}`, (err, result) => {
-      if (err) res.status(400).send(err);
-      else res.status(200).send(result);
-    });
+    db.query(
+      // to fit the type name ryan provided
+      `SELECT * FROM ${typeData} WHERE ${typeData}.typename="${req.params.type}";`,
+      (err, info) => {
+        if (err) res.status(400).send(err);
+        else{
+          if(!info[0]) res.status(200).send();
+          else
+            db.query(`SELECT * FROM ${info[0].tablename};`, (err, table) => {
+              if (err) res.status(400).send(err);
+              else
+                res.status(200).send({
+                  sizingNotes: info[0].sizing_notes,
+                  table: table
+                });
+            });
+        }
+      }
+    );
   }
 };

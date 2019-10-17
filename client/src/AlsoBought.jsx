@@ -25,8 +25,10 @@ class AlsoBought extends React.Component{
               }/></div>
 
               <div className="abTextContainer">
+                
                 {/* <p className="abText stars">{obj.rate}</p> */}
                 <Stars rating={obj.rate}/>
+
                 <p className="abText abCount">{"("+obj.reviewer+")"}</p>
                 <div className="abItemTextBox">
                   <p className="abText">{obj.seller}</p>

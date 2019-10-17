@@ -5,7 +5,7 @@
   src: url("./asset/TeXGyreSchola-Bold.ttf");
 }
 
-#content{
+#content {
   margin: 0 auto;
   max-width: 1060px;
 }
@@ -14,13 +14,16 @@
   margin: 0;
 }
 
+#ab{
+  margin-top: 50px;
+}
 .moduleTitle {
   font-family: "Titles";
   font-size: 25px;
   margin: 20px 10px;
 }
 
-.secondaryTitle{
+.secondaryTitle {
   font-family: "Titles";
   margin: 10px 0;
 }
@@ -107,16 +110,17 @@ right most grid not fully shown when collapse*/
   position: relative;
   padding: 0;
 }
-#wrapper{
+#wrapper {
   margin-left: 140px;
   overflow-x: auto;
-  max-width:87%; /* 920/1060 */
+  max-width: 87%; /* 920/1060 */
 }
 #scTable {
   border-collapse: collapse;
-  width:100%;
+  width: 100%;
 }
-.tblLeft,.tblRight{
+.tblLeft,
+.tblRight {
   font-family: "Roboto Condensed", sans-serif;
   text-align: left;
   padding: 15px;
@@ -133,6 +137,11 @@ right most grid not fully shown when collapse*/
   min-width: 100px;
   white-space: nowrap;
 }
-.topRow{
+.topRow {
   border-bottom-width: 2px;
+}
+
+#sizeNote {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
 }

@@ -18,7 +18,7 @@ app.listen(port, () => {
 // });
 
 app.get("/ab", ctrl.ab);
-app.get("/sc/:tbl", ctrl.sc);
+app.get("/sc/:type", ctrl.sc);
 
 /////////// data generator page ////////////
 

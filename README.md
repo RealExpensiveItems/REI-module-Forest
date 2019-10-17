@@ -1,6 +1,10 @@
 # REI (module Forest)
 
-> One of the modules in program REI, rendering item recommending module.
+> One of the modules in program REI, rendering size chart and item recommending module.
+
+> Need to change the style of the scroll bar below chart
+> Need to implement folded chart and list when window shrink
+> Need to fix a rare bug on row headers when page loaded
 
 ## Related Projects
 
@@ -18,6 +22,7 @@
 ## Usage
 
 > No API provided by this module so far
+- This module need product type to be provided by another module
 
 ## Requirements
 

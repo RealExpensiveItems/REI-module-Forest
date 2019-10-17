@@ -12,6 +12,20 @@ CREATE TABLE also_bought(
   img TEXT NOT NULL
 );
 
+CREATE TABLE product_type(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  typename TEXT NOT NULL,
+  tablename TEXT NOT NULL,
+  sizing_notes TEXT NOT NULL
+);
+INSERT INTO product_type(typename,tablename,sizing_notes)VALUE("jackets","jackets","Inseam varies depending on style. Measurements are stated in inches unless otherwise indicated.");
+INSERT INTO product_type(typename,tablename,sizing_notes)VALUE("pants","pants","");
+INSERT INTO product_type(typename,tablename,sizing_notes)VALUE("bikes","bikes","Measurements are stated in millimeters unless otherwise indicated.");
+INSERT INTO product_type(typename,tablename,sizing_notes)VALUE("boots","boots","");
+
+/*
+mysql -u forest < db/dbseeding.sql
+*/
 CREATE TABLE jackets(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   key_name TEXT NOT NULL,
@@ -57,9 +71,8 @@ CREATE TABLE boots(
   s11 TEXT NOT NULL
 );
 
-/*
-mysql -u forest < db/dbseeding.sql
-*/
+
+
 INSERT INTO also_bought(rate,reviewer,seller,item,price,img)VALUE("5",289,"Darn Tough","Micro Crew Cushion Hiking Socks - Men's","$23.00","https://rei-module-forest-imgs.s3-us-west-1.amazonaws.com/pics/001.jpg");
 INSERT INTO also_bought(rate,reviewer,seller,item,price,img)VALUE("4.5",18,"REI Co-op","Ditty Sack - Set of 3","$19.95","https://rei-module-forest-imgs.s3-us-west-1.amazonaws.com/pics/002.jpg");
 INSERT INTO also_bought(rate,reviewer,seller,item,price,img)VALUE("4.25",42,"REI Co-op","Flexlite Air Chair","$99.95","https://rei-module-forest-imgs.s3-us-west-1.amazonaws.com/pics/003.jpg");

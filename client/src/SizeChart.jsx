@@ -46,8 +46,18 @@ class SizeChart extends React.Component{
 
           </table>
         </div>
+        <SizingNotes sNote={this.props.sNote}/>
       </div>
     );
   }
 }
 export default SizeChart;
+
+const SizingNotes=({sNote})=>(
+  sNote?
+  <div id="sizeNote">
+    <h4>Sizing notes</h4>
+    <p>{sNote}</p>
+  </div>
+  :<div className="box"></div>
+);
