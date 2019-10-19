@@ -2,7 +2,14 @@
 
 @font-face {
   font-family: "Titles";
-  src: url("./asset/TeXGyreSchola-Bold.ttf");
+  src: url("./asset/fonts/Clarendon.ttf");
+}
+/* @font-face {
+  font-family: "Roboto Condensed";
+  src: url("./asset/fonts/Roboto-Condensed.ttf");
+} */
+.box {
+  margin: 0;
 }
 
 #content {
@@ -10,22 +17,19 @@
   max-width: 1060px;
 }
 
-.box {
-  margin: 0;
-}
-
-#ab{
+#ab {
   margin-top: 50px;
 }
 .moduleTitle {
   font-family: "Titles";
-  font-size: 25px;
+  font-size: 23px;
   margin: 20px 10px;
 }
 
 .secondaryTitle {
   font-family: "Titles";
-  margin: 10px 0;
+  font-size: 18px;
+  margin: 20px 0 12px 0;
 }
 #abList {
   margin: 0;
@@ -104,8 +108,6 @@
 
 /* size chart */
 
-/* problem not solved:
-right most grid not fully shown when collapse*/
 #sc {
   position: relative;
   padding: 0;

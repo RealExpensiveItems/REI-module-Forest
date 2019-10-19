@@ -2,9 +2,9 @@
 
 > One of the modules in program REI, rendering size chart and item recommending module.
 
-> Need to change the style of the scroll bar below chart
-> Need to implement folded chart and list when window shrink
-> Need to fix a rare bug on row headers when page loaded
+- Need to change the style of the scroll bar below chart
+- Need to implement folded chart and list when window shrink
+- Need to fix a rare bug on row headers when page loaded
 
 ## Related Projects
 
