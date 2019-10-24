@@ -10,31 +10,31 @@ class AlsoBought extends React.Component{
   }
   render(){
     return(
-      <div id="ab" className="box">
+      <div id="Forest-ab" className="Forest-box">
         {/* Todo: import multiple titles */}
-        <h2 className="moduleTitle">People who bought this item also bought</h2>
-        <div id="abList">
+        <h2 className="Forest-moduleTitle">People who bought this item also bought</h2>
+        <div id="Forest-abList">
           {this.props.data.map((obj)=>(
-            <div className="abContainer">
+            <div className="Forest-abContainer">
 
-              <div className="abImgContainer"><img className="abImg" src={
+              <div className="Forest-abImgContainer"><img className="Forest-abImg" src={
                   //comment the 2 lines below for optimize after dev
                   this.state.devMode  //to save some use on AWS
                   ?require('../../db/rawData/pics/'+('00'+obj.id).slice(-3)+'.jpg'):
                   obj.img
               }/></div>
 
-              <div className="abTextContainer">
+              <div className="Forest-abTextContainer">
                 
-                {/* <p className="abText stars">{obj.rate}</p> */}
+                {/* <p className="Forest-abText Forest-stars">{obj.rate}</p> */}
                 <Stars rating={obj.rate}/>
 
-                <p className="abText abCount">{"("+obj.reviewer+")"}</p>
-                <div className="abItemTextBox">
-                  <p className="abText">{obj.seller}</p>
-                  <p className="abText itemName">{obj.item}</p>
+                <p className="Forest-abText Forest-abCount">{"("+obj.reviewer+")"}</p>
+                <div className="Forest-abItemTextBox">
+                  <p className="Forest-abText">{obj.seller}</p>
+                  <p className="Forest-abText Forest-itemName">{obj.item}</p>
                 </div>
-                <p className="abText itemPrice">{obj.price}</p>
+                <p className="Forest-abText Forest-itemPrice">{obj.price}</p>
               </div>
 
             </div>
@@ -51,11 +51,11 @@ const Stars=({rating})=>{
   var res=[];
   var rate=Number(rating);
   for(var i=1;i<=5;i++){
-    if(i-rate<=0) res[i-1]=(<img className="abText stars" src={require('../../db/rawData/stars/4.png')}/>);
-    if(i-rate===0.25) res[i-1]=(<img className="abText stars" src={require('../../db/rawData/stars/3.png')}/>);
-    if(i-rate===0.5) res[i-1]=(<img className="abText stars" src={require('../../db/rawData/stars/2.png')}/>);
-    if(i-rate===0.75) res[i-1]=(<img className="abText stars" src={require('../../db/rawData/stars/1.png')}/>);
-    if(i-rate>=1) res[i-1]=(<img className="abText stars" src={require('../../db/rawData/stars/0.png')}/>);
+    if(i-rate<=0) res[i-1]=(<img className="Forest-abText Forest-stars" src={require('../../db/rawData/stars/4.png')}/>);
+    if(i-rate===0.25) res[i-1]=(<img className="Forest-abText Forest-stars" src={require('../../db/rawData/stars/3.png')}/>);
+    if(i-rate===0.5) res[i-1]=(<img className="Forest-abText Forest-stars" src={require('../../db/rawData/stars/2.png')}/>);
+    if(i-rate===0.75) res[i-1]=(<img className="Forest-abText Forest-stars" src={require('../../db/rawData/stars/1.png')}/>);
+    if(i-rate>=1) res[i-1]=(<img className="Forest-abText Forest-stars" src={require('../../db/rawData/stars/0.png')}/>);
   }
   return(res);
 }

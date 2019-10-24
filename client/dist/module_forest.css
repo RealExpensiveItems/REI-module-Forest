@@ -8,30 +8,30 @@
   font-family: "Roboto Condensed";
   src: url("./asset/fonts/Roboto-Condensed.ttf");
 } */
-.box {
+.Forest-box {
   margin: 0;
 }
 
-#content {
+#Forest-content {
   margin: 0 auto;
   max-width: 1060px;
 }
 
-#ab {
+#Forest-ab {
   margin-top: 50px;
 }
-.moduleTitle {
+.Forest-moduleTitle {
   font-family: "Titles";
   font-size: 23px;
   margin: 20px 10px;
 }
 
-.secondaryTitle {
+.Forest-secondaryTitle {
   font-family: "Titles";
   font-size: 18px;
   margin: 20px 0 12px 0;
 }
-#abList {
+#Forest-abList {
   margin: 0;
   overflow-x: auto; /* or hidden */
   white-space: nowrap;
@@ -41,7 +41,7 @@
   /* seems flexbox need more adjust on width to work */
 }
 
-.abContainer {
+.Forest-abContainer {
   display: inline-block;
   vertical-align: top;
   margin: 3px;
@@ -52,7 +52,7 @@
   /* size should be the same with another module */
 }
 
-.abImgContainer {
+.Forest-abImgContainer {
   height: 190px;
   width: 170px;
 
@@ -61,7 +61,7 @@
   vertical-align: middle;
 }
 
-.abImg {
+.Forest-abImg {
   /* fixing the ratio */
   max-width: 165px;
   max-height: 175px;
@@ -69,38 +69,38 @@
   height: auto;
 }
 
-.abText {
+.Forest-abText {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   margin: 4px 1px;
 }
 
-.stars {
+.Forest-stars {
   float: left;
   margin: 1px 1px;
   height: 13px;
   width: auto;
 }
 
-.abCount {
+.Forest-abCount {
   float: left;
   font-size: 13px;
   margin: 0 0 8px 4px;
 }
 
-.abItemTextBox {
+.Forest-abItemTextBox {
   clear: left;
 }
-.abItemTextBox:hover {
+.Forest-abItemTextBox:hover {
   text-decoration: underline;
 }
 
-.itemName {
+.Forest-itemName {
   font-size: 16px;
   line-height: 23px;
 }
 
-.itemPrice {
+.Forest-itemPrice {
   font-size: 14px;
   font-weight: 300;
   margin: 11px 1px;
@@ -108,42 +108,42 @@
 
 /* size chart */
 
-#sc {
+#Forest-sc {
   position: relative;
   padding: 0;
 }
-#wrapper {
+#Forest-wrapper {
   margin-left: 140px;
   overflow-x: auto;
   max-width: 87%; /* 920/1060 */
 }
-#scTable {
+#Forest-scTable {
   border-collapse: collapse;
   width: 100%;
 }
-.tblLeft,
-.tblRight {
+.Forest-tblLeft,
+.Forest-tblRight {
   font-family: "Roboto Condensed", sans-serif;
   text-align: left;
   padding: 15px;
   margin: 0;
   border: 1px solid #ccc;
 }
-.tblLeft {
+.Forest-tblLeft {
   border-right-width: 4px;
   width: 109px; /* 140-15*2-1 */
   position: absolute;
   left: 0;
 }
-.tblRight {
+.Forest-tblRight {
   min-width: 100px;
   white-space: nowrap;
 }
-.topRow {
-  border-bottom-width: 2px;
-}
+/* .Forest-topRow {
+  border-bottom: 2px solid #ccc;
+} */
 
-#sizeNote {
+#Forest-sizeNote {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 15px;
 }

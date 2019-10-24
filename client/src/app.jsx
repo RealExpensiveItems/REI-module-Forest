@@ -20,7 +20,7 @@ class ModuleForest extends React.Component {
     };
   }
   componentDidMount() {
-    if (config.devMode) console.log("\nDEV-Mode ON\n\n");
+    // if (config.devMode) console.log("\nDEV-Mode ON\n\n");
 
     axios.get("/ab").then(
       data => {
@@ -51,9 +51,9 @@ class ModuleForest extends React.Component {
   render() {
     return (
       //Todo: template for different window size
-      <div id = "content" >
-        {this.state.scLoad ? <SizeChart data={this.state.scData} sNote={this.state.scNote}/> : <div className="box"></div>}
-        {this.state.abLoad ? <AlsoBought data={this.state.abData} /> : <div className="box"></div>}
+      <div id = "Forest-content" >
+        {this.state.scLoad ? <SizeChart data={this.state.scData} sNote={this.state.scNote}/> : <div className="Forest-box"></div>}
+        {this.state.abLoad ? <AlsoBought data={this.state.abData} /> : <div className="Forest-box"></div>}
       </div>
     );
   }
