@@ -9,6 +9,6 @@ module.exports = {
     typeName: ["jackets", "pants", "bikes", "boots"]
   },
 
-  devMode: true
-  // devMode:false,
+  // devMode: true
+  devMode:false,
 };

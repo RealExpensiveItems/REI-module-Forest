@@ -141,7 +141,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = {\n  localPort: 3008,\n  dbInfo: {\n    user: \"forest\",\n    password: \"\",\n    dbName: \"module_forest\",\n    abTableName: \"also_bought\",\n    typeTableName: \"product_type\",\n    typeName: [\"jackets\", \"pants\", \"bikes\", \"boots\"]\n  },\n  devMode: true // devMode:false,\n\n};\n\n//# sourceURL=webpack:///./configs/server-cfg.js?");
+eval("module.exports = {\n  localPort: 3008,\n  dbInfo: {\n    user: \"forest\",\n    password: \"\",\n    dbName: \"module_forest\",\n    abTableName: \"also_bought\",\n    typeTableName: \"product_type\",\n    typeName: [\"jackets\", \"pants\", \"bikes\", \"boots\"]\n  },\n  // devMode: true\n  devMode: false\n};\n\n//# sourceURL=webpack:///./configs/server-cfg.js?");
 
 /***/ }),
 
