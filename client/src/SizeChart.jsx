@@ -17,7 +17,7 @@ class SizeChart extends React.Component{
         if(document.getElementById("Forest-th"+i).clientHeight!==this.state.thHeight[i])
           arr[i]=document.getElementById("Forest-th"+i).clientHeight+1;
       // console.log(arr)
-      this.setState({thHeight:arr});      
+      this.setState({thHeight:arr});
     }, 200);
   }
   render(){

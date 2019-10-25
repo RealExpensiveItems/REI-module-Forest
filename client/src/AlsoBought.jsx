@@ -8,6 +8,15 @@ class AlsoBought extends React.Component{
       devMode:config.devMode
     };
   }
+  toggleScrollbar(){
+    if(Number(document.getElementById("Forest-abList").clientWidth)<1060)
+      document.getElementById("Forest-abList").style.overflowX="auto";
+    else
+      document.getElementById("Forest-abList").style.overflowX="hidden";
+  }
+  componentDidMount(){
+    window.addEventListener("resize",this.toggleScrollbar.bind(this));
+  }
   render(){
     return(
       <div id="Forest-ab" className="Forest-box">

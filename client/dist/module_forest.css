@@ -1,9 +1,14 @@
 /* @media screen and (min-width: 320px) and (max-width: 1156px){ */
 
-@font-face {
+@font-face{
+  font-family: "Titles";
+  src: url("https://rei-module-forest-imgs.s3-us-west-1.amazonaws.com/Clarendon.ttf") format("truetype");
+}
+
+/* @font-face {
   font-family: "Titles";
   src: url("./asset/fonts/Clarendon.ttf");
-}
+} */
 /* @font-face {
   font-family: "Roboto Condensed";
   src: url("./asset/fonts/Roboto-Condensed.ttf");
@@ -33,11 +38,10 @@
 }
 #Forest-abList {
   margin: 0;
-  overflow-x: auto; /* or hidden */
+  overflow-x: hidden; /* or hidden */
   white-space: nowrap;
   height: 380px;
   width: 100%;
-  /* display: flex; */
   /* seems flexbox need more adjust on width to work */
 }
 
