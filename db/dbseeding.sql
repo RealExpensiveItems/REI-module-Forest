@@ -24,7 +24,7 @@ INSERT INTO product_type(typename,tablename,sizing_notes)VALUE("bikes","bikes","
 INSERT INTO product_type(typename,tablename,sizing_notes)VALUE("boots","boots","");
 
 /*
-mysql -u forest < db/dbseeding.sql
+mysql -u root < db/dbseeding.sql
 */
 CREATE TABLE jackets(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
