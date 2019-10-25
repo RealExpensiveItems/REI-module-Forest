@@ -1,7 +1,7 @@
 module.exports = {
   localPort: 3008,
   dbInfo: {
-    user: "forest",
+    user: "root",
     password: "",
     dbName: "module_forest",
     abTableName: "also_bought",
